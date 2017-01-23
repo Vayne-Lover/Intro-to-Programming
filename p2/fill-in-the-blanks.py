@@ -35,7 +35,7 @@ def welcome():
 def set_difficulty():
     while True:
         difficulty=raw_input()
-        if difficulty=='easy' or difficulty=='medium' or difficulty=='hard' :
+        if difficulty in ['easy','medium' ,'hard'] :
             break
         else:
             print "Please input easy,medium or hard!"
@@ -59,7 +59,13 @@ def handle_input(keys,samples):
 
     print "Congratulations.You win!"
 
-def play():
+def main_func():
+    '''
+    The main function is building a fill-in-the-blanks quiz.
+    Argument:None
+    return:None
+    '''
+
     welcome()
     difficulty=set_difficulty()
     show_difficulty(difficulty)
@@ -74,6 +80,6 @@ def play():
 
 if __name__=='__main__':
     try:
-        play()
+        main_func()
     except Exception , e:
         print e
