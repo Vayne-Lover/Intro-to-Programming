@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
 
 class Sample:
+    '''
+    The class Sample store the sample data.
+    '''
     def __init__(self,difficulty):
+        '''
+        Init the class.
+        :param difficulty:
+        '''
         if difficulty == 'easy':
             self.sample = 'All heros in LOL have four skills _1_,_2_,_3_,_4_.'
         elif difficulty == 'medium':
@@ -14,10 +21,20 @@ class Sample:
                   '''
 
     def get_sample(self):
+        '''
+        return: sample data
+        '''
         return self.sample
 
 class Key:
+    '''
+    The class Key store the key data.
+    '''
     def __init__(self,difficulty):
+        '''
+        Init the class.
+        :param difficulty:
+        '''
         if difficulty == 'easy':
             self.keys = ['Q', 'W', 'E', 'R']
         elif difficulty == 'medium':
@@ -26,13 +43,22 @@ class Key:
             self.keys = ['Ezreal', 'Runeterra', 'Shurima', 'sorcerous']
 
     def get_keys(self):
+        '''
+        :return: key data
+        '''
         return self.keys
 
 def welcome():
+    '''
+    print welcome words.
+    '''
     print 'Welcome,please select the game difficulty.'
     print 'Possible choices include easy, medium, and hard.'
 
 def set_difficulty():
+    '''
+    Set difficulty of the game.
+    '''
     while True:
         difficulty=raw_input()
         if difficulty in ['easy','medium' ,'hard'] :
@@ -42,9 +68,19 @@ def set_difficulty():
     return difficulty
 
 def show_difficulty(difficulty):
+    '''
+    Show the difficulty user choose.
+    :param difficulty:
+    '''
     print 'You choose '+difficulty+"！"+'Good luck!'
 
 def handle_input(keys,samples):
+    '''
+    Handle user's input.
+    :param keys:
+    :param samples:
+    :return:
+    '''
     count=0
     while count<len(keys):
         print samples
@@ -56,7 +92,7 @@ def handle_input(keys,samples):
             count += 1
         else:
             print "Wrong!Please try again."
-
+    print samples
     print "Congratulations.You win!"
 
 def main_func():
