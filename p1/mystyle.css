@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing:border-box;
+}
+
+h1{
+	font-family:"Lucida Grande";
+}
+
+body{
+	background-color:gray;
+}
+
+.myhead{
+	color: white;
+	text-align: center;
+    font-size: 50px;
+}
+
+.mymain{
+	display: -webkit-flex;
+    display: flex;
+}
+
+.myimage{
+	max-width: 700px;
+    margin: 16px 10px 0px 0px;
+}
+
+.mytext{
+	font-family: Arial;
+	font-size: 15px;
+	margin: 0px 0px 0px 10px;
+	color: white;
+}
